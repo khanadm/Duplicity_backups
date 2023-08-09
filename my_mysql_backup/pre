@@ -1,0 +1,13 @@
+#!/bin/bash
+
+WORKDIR=/home/cloud_user/
+SUBDIR=backup
+
+mkdir -p "${WORKDIR}/${SUBDIR}"
+touch "${WORKDIR}/${SUBDIR}/dump"
+chmod 0600 "${WORKDIR}/${SUBDIR}/dump"
+
+DBNAME=ongraph
+MYSQL_PASSWORD="ongraph"
+mysqldump -u ongraph -p"${MYSQL_PASSWORD}" --databases "${DBNAME}" > "${WORKDIR}/${SUBDIR}/dump"
+

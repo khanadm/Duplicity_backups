@@ -1,0 +1,5 @@
+#!/bin/bash
+WORKDIR=/home/cloud_user/backup/
+DBNAME=ongraph
+MYSQL_PASSWORD="ongraph"
+mysql -u ongraph -p"${MYSQL_PASSWORD}" $DBNAME < ${WORKDIR}/dump

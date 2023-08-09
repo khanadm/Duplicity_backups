@@ -1,0 +1,3 @@
+#!/bin/bash
+WORKDIR=/home/cloud_user/backup/
+
