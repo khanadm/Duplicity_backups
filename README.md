@@ -40,15 +40,19 @@ Initialize a new Duply profile using the duply command
 Replace my_backup_profile with your desired profile name:
 
 
+
 `duply my_mysql_backup create`
+
 
 
 Then:
 
 Go to home directory of duply
 
+
+
 ```sh
-cd USER_HOME/.duply/PROFILE_NAME
+cd  ~/.duply/PROFILE_NAME
 ```
 
 
@@ -56,7 +60,9 @@ cd USER_HOME/.duply/PROFILE_NAME
 `cd /home/cloud_user/.duply/my_mysql_backup`
 
 
+
 Here you find **conf** file under that you have to change some parameters
+
 
 
 **conf** This is the main configuration file for the profile. It contains various settings like source and destination, encryption, compression, etc.
@@ -192,7 +198,7 @@ Press `Esc` then `:` write  `wq` Press Enter
 **MYSQL_PASSWORD** Specifies the MySQL password for the user ongraph.
 
 
-mysql -u ongraph -p"${MYSQL_PASSWORD}" $DBNAME < ${WORKDIR}/dump
+mysql -u ongraph -p"${MYSQL_PASSWORD}" $DBNAME <  ${WORKDIR}/dump
 
 This command uses the mysql client to connect to the MySQL server as the user ongraph with the provided password. It then specifies the database name using the -u flag, and it redirects the contents of the backup file (dump) into the mysql command using input redirection (<). This effectively restores the database using the backup data.
 
